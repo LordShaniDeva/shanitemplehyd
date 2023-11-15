@@ -2,6 +2,7 @@ import Button from '@/components/button';
 import EventsSection from '@/components/events';
 import TheGallery from '@/components/gallery';
 import GridImagePicker from '@/components/image-picker/grid';
+import Timings from '@/components/timings';
 import SectionTitle from '@/components/title/section';
 import Image from 'next/image';
 
@@ -104,7 +105,8 @@ export default function Home() {
           </div>
           <div>
             {/* Temple Timings */}
-            <div className="flex flex-col justify-center  ">
+            <Timings />
+            {/* <div className="flex flex-col justify-center  ">
               <div className="text-3xl font-bold">Temple Timings</div>
               <div className="text-xl font-semibold">Daily</div>
               <div className="text-xl font-semibold">8:00 AM - 12:00 PM</div>
@@ -112,7 +114,7 @@ export default function Home() {
               <div className="text-xl font-semibold">Sunday</div>
               <div className="text-xl font-semibold">8:00 AM - 1:00 PM</div>
               <div className="text-xl font-semibold">5:00 PM - 8:00 PM</div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -124,9 +126,7 @@ export default function Home() {
           Workshops
         </h1>
       </SectionTitle>
-    <div>
-      
-    </div>
+      <div></div>
       <div className="flex items-center justify-center p-8">
         <Button className="">View Gallery</Button>
       </div>
