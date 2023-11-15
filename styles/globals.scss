@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+// Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-lora: 'Lora', serif;
+}
+
+.lora {
+  font-family: var(--font-lora);
+}
+
+.inter {
+  font-family: var(--font-inter);
+}
+body {
+  color: #694c5c;
+  background-color: #ffefe2;
+  font-family: 'Inter', sans-serif;
+}
+
+// .root-background {
+//   background: url(/banners/right-bottom.png), url(/banners/right-top.png),
+//     url(/banners/left-middle.png), url(/banners/lefy-bottom.png),
+//     url(/banners/left-top.png), url(/banners/left-middle.png),
+//     url(/banners/Om_BG_Pattern22.png);
+//   background-repeat: no-repeat, no-repeat, repeat-y, no-repeat, no-repeat,
+//     repeat-y, repeat;
+//   background-position: right bottom, right 0px, right 12px, bottom left, 0px 0px,
+//     0px 80px, 0px 0px;
+// }
