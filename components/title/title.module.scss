@@ -7,6 +7,7 @@ Style For Title
   align-items: center;
   padding: 4rem;
   flex-direction: column;
+  color: #fd8f8f;
 }
 
 .container .text-content {
@@ -14,7 +15,8 @@ Style For Title
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  position: relative;
+  z-index: 99;
   p {
     margin-bottom: 2px;
     font-family: 'Montserrat', sans-serif;
@@ -37,5 +39,19 @@ Style For Title
     box-sizing: border-box;
     letter-spacing: 1px;
     color: #44233b;
+  }
+  span {
+    text-align: center;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    border: 0;
+    outline: 0;
+    word-wrap: break-word;
+    margin-top: 0em;
+    box-sizing: border-box;
+    margin-bottom: 0;
   }
 }

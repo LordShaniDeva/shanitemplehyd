@@ -4,11 +4,13 @@ import Sidebar from './sidebar';
 
 const DashboardLayout = ({ children }: React.PropsWithChildren<{}>) => {
   return (
-    <div>
+    <React.Fragment>
       <Header />
       <Sidebar />
-      {children}
-    </div>
+      <div className="p-4 sm:ml-64">
+        <div className="mt-14 flex flex-col">{children}</div>
+      </div>
+    </React.Fragment>
   );
 };
 export default DashboardLayout;

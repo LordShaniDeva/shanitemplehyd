@@ -1,7 +1,7 @@
-import axios from 'axios';
+import a from 'axios';
 
-const network = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_BASE_URL + '/api',
+const axios = a.create({
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
 });
 
-export default network;
+export default axios;

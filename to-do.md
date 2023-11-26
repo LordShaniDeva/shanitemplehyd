@@ -8,7 +8,7 @@
 - About us
 - Contact us
 
-Assuming all the web pages wil stay the same , except Events and photo gallery can we update the content ourselves?
+Assuming all the web pages will stay the same , except Events and photo gallery can we update the content ourselves?
 https://shanitemplehyd.com/ ( Shani Temple )
 
 <!-- Mongo Image Service -->

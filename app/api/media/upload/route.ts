@@ -2,7 +2,7 @@ import { Readable } from 'stream';
 import { NextResponse } from 'next/server';
 import { connectToMongo } from '@/database/mongo';
 import fileExists from '@/database/utils/file-exists';
-import { IMAGE_BUCKET_NAME } from '@/database/config';
+import { MONGODB_BUCKET_NAME } from '@/config';
 
 export async function POST(req: Request) {
   const { bucket } = await connectToMongo();
@@ -18,7 +18,7 @@ export async function POST(req: Request) {
 
     if (isFile) {
       const blob = value as Blob;
-      const existing = await fileExists(filename, IMAGE_BUCKET_NAME);
+      const existing = await fileExists(filename, MONGODB_BUCKET_NAME);
       if (existing) {
         NextResponse.json({
           success: false,

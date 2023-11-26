@@ -7,10 +7,10 @@ const GalleryPage = () => {
     <React.Fragment>
       <PageTitle>
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lora">
-          Gallery
+          Deities
         </h1>
         <p className="text-base text-gray-500">
-          Our temple is dedicated to the worship of Lord Shani.
+          The holy embodiments of divine power in our temple.
         </p>
       </PageTitle>
       <TheGallery images={deities} />
@@ -99,6 +99,14 @@ const deities = [
   {
     name: '',
     source: '/deities/shri-lord.png',
+  },
+  {
+    name: '',
+    source: '/deities/temple.png',
+  },
+  {
+    name: '',
+    source: '/deities/temple.png',
   },
   {
     name: '',

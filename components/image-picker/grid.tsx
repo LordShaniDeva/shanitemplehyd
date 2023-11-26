@@ -21,7 +21,7 @@ const GridImagePicker = ({ value, onChange, images }: Props) => {
     setState(value);
   }, []);
   return (
-    <div className="grid gap-4">
+    <div className="grid gap-1">
       <div className="relative flex flex-col ">
         <img
           className="h-[425px] max-w-full rounded-lg object-cover"
@@ -30,7 +30,7 @@ const GridImagePicker = ({ value, onChange, images }: Props) => {
         />
         {/* Backdrop Filteres Banner */}
       </div>
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-5 gap-1">
         {images.map((item, index) => {
           const active = item.source === state.source;
           return (

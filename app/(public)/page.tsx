@@ -1,40 +1,13 @@
+import Link from 'next/link';
 import Button from '@/components/button';
-import EventsSection from '@/components/events';
-import TheGallery from '@/components/gallery';
-import GridImagePicker from '@/components/image-picker/grid';
 import Timings from '@/components/timings';
+import EventsSection from '@/components/events';
 import SectionTitle from '@/components/title/section';
-import Image from 'next/image';
+import GridImagePicker from '@/components/image-picker/grid';
+import ContactForm from '@/components/contact';
+import events from '@/constants/events';
 
-export default function Home() {
-  // Shani God Images array
-  const shaniGodImages = [
-    {
-      id: 1,
-      url: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg',
-      alt: 'Shani God Image 1',
-    },
-    {
-      id: 2,
-      url: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg',
-      alt: 'Shani God Image 2',
-    },
-    {
-      id: 3,
-      url: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg',
-      alt: 'Shani God Image 3',
-    },
-    {
-      id: 4,
-      url: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg',
-      alt: 'Shani God Image 4',
-    },
-    {
-      id: 5,
-      url: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg',
-      alt: 'Shani God Image 5',
-    },
-  ];
+function Home() {
   return (
     <div className="container mx-auto">
       {/* Banner Image */}
@@ -49,7 +22,8 @@ export default function Home() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white lora">
-              LORD SHANI DEV
+              अस्माकं तु विशिष्टा ये तान्निबोध द्विजोत्तम। <br />
+              नायका मम सैन्यस्य संञ्ज्ञार्थं तान्ब्रवीमि ते।।7।।
             </h1>
           </div>
         </div>
@@ -62,7 +36,7 @@ export default function Home() {
           Workshops
         </h1>
       </SectionTitle>
-      <EventsSection />
+      <EventsSection events={events} />
       <div className="flex items-center justify-center p-8">
         <Button className="">More Events</Button>
       </div>
@@ -103,33 +77,48 @@ export default function Home() {
               ]}
             />
           </div>
-          <div>
-            {/* Temple Timings */}
-            <Timings />
-            {/* <div className="flex flex-col justify-center  ">
-              <div className="text-3xl font-bold">Temple Timings</div>
-              <div className="text-xl font-semibold">Daily</div>
-              <div className="text-xl font-semibold">8:00 AM - 12:00 PM</div>
-              <div className="text-xl font-semibold">5:00 PM - 8:00 PM</div>
-              <div className="text-xl font-semibold">Sunday</div>
-              <div className="text-xl font-semibold">8:00 AM - 1:00 PM</div>
-              <div className="text-xl font-semibold">5:00 PM - 8:00 PM</div>
-            </div> */}
-          </div>
+          <Timings />
         </div>
       </div>
       {/* Gallery Preview */}
       <SectionTitle>
         <p>Gallery</p>
         <h1>
-          Upcoming Events And <br />
-          Workshops
+          We hope you enjoy our
+          <br />
+          Gallery
         </h1>
       </SectionTitle>
-      <div></div>
-      <div className="flex items-center justify-center p-8">
-        <Button className="">View Gallery</Button>
+      <div className="grid grid-cols-1 sm:grid-cols-2 min-h-screen">
+        <div className="bg-[url(https://images.unsplash.com/photo-1560420713-b279b33e9abf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-no-repeat bg-center relative">
+          {/* <span className="absolute bottom-0 lora w-full bg-black bg-opacity-50 backdrop-blur-md p-8 text-xl text-white hover:text-red-500 cursor-pointer">
+            Ganesh Pooja
+          </span> */}
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2">
+          <div className="bg-[url(https://images.unsplash.com/photo-1460601416989-a913740bdde9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-no-repeat bg-center">
+            <span className="sr-only">Background Image</span>
+          </div>
+          <div className="bg-[url(https://images.unsplash.com/photo-1517072115201-1db1ca3cc193?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-no-repeat bg-center">
+            <span className="sr-only">Background Image</span>
+          </div>
+          <div className="bg-[url(https://images.unsplash.com/photo-1460601416989-a913740bdde9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-no-repeat bg-center">
+            <span className="sr-only">Background Image</span>
+          </div>
+          <div className="bg-[url(https://images.unsplash.com/photo-1517072115201-1db1ca3cc193?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-no-repeat bg-center">
+            <span className="sr-only">Background Image</span>
+          </div>
+        </div>
       </div>
+      <div className="flex items-center justify-center p-8">
+        <Link href={'/gallery'}>
+          <Button>View Gallery</Button>
+        </Link>
+      </div>
+      {/* CONTACT SECTION */}
+      <ContactForm />
     </div>
   );
 }
+
+export default Home;
